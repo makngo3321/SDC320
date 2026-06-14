@@ -1,0 +1,15 @@
+C:\Users\18046\OneDrive\Desktop\School items\SDC320\2.6Project_Makayla_Ngoun\bin\Debug\net6.0\2.6Project_Makayla_Ngoun.exe
+C:\Users\18046\OneDrive\Desktop\School items\SDC320\2.6Project_Makayla_Ngoun\bin\Debug\net6.0\2.6Project_Makayla_Ngoun.deps.json
+C:\Users\18046\OneDrive\Desktop\School items\SDC320\2.6Project_Makayla_Ngoun\bin\Debug\net6.0\2.6Project_Makayla_Ngoun.runtimeconfig.json
+C:\Users\18046\OneDrive\Desktop\School items\SDC320\2.6Project_Makayla_Ngoun\bin\Debug\net6.0\2.6Project_Makayla_Ngoun.dll
+C:\Users\18046\OneDrive\Desktop\School items\SDC320\2.6Project_Makayla_Ngoun\bin\Debug\net6.0\2.6Project_Makayla_Ngoun.pdb
+C:\Users\18046\OneDrive\Desktop\School items\SDC320\2.6Project_Makayla_Ngoun\obj\Debug\net6.0\2.6Project_Makayla_Ngoun.csproj.AssemblyReference.cache
+C:\Users\18046\OneDrive\Desktop\School items\SDC320\2.6Project_Makayla_Ngoun\obj\Debug\net6.0\2.6Project_Makayla_Ngoun.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\18046\OneDrive\Desktop\School items\SDC320\2.6Project_Makayla_Ngoun\obj\Debug\net6.0\2.6Project_Makayla_Ngoun.AssemblyInfoInputs.cache
+C:\Users\18046\OneDrive\Desktop\School items\SDC320\2.6Project_Makayla_Ngoun\obj\Debug\net6.0\2.6Project_Makayla_Ngoun.AssemblyInfo.cs
+C:\Users\18046\OneDrive\Desktop\School items\SDC320\2.6Project_Makayla_Ngoun\obj\Debug\net6.0\2.6Project_Makayla_Ngoun.csproj.CoreCompileInputs.cache
+C:\Users\18046\OneDrive\Desktop\School items\SDC320\2.6Project_Makayla_Ngoun\obj\Debug\net6.0\2.6Project_Makayla_Ngoun.dll
+C:\Users\18046\OneDrive\Desktop\School items\SDC320\2.6Project_Makayla_Ngoun\obj\Debug\net6.0\refint\2.6Project_Makayla_Ngoun.dll
+C:\Users\18046\OneDrive\Desktop\School items\SDC320\2.6Project_Makayla_Ngoun\obj\Debug\net6.0\2.6Project_Makayla_Ngoun.pdb
+C:\Users\18046\OneDrive\Desktop\School items\SDC320\2.6Project_Makayla_Ngoun\obj\Debug\net6.0\2.6Project_Makayla_Ngoun.genruntimeconfig.cache
+C:\Users\18046\OneDrive\Desktop\School items\SDC320\2.6Project_Makayla_Ngoun\obj\Debug\net6.0\ref\2.6Project_Makayla_Ngoun.dll
