@@ -10,6 +10,9 @@
 */
 public class Playlist
 {
+    //This is the ID for the playlist
+    public int ID { get; set; }
+
     //This is the playlist name and the name can be altered.
     public string Name { get; set; }
 
@@ -23,6 +26,15 @@ public class Playlist
     public int TotalSongs
     {
         get { return Items.Count; }
+    }
+
+    //This is parameters for loading an existing playlist
+    public Playlist(int id, string name, DateTime dateCreated)
+    {
+        ID = id;
+        Name = name;
+        DateCreated = dateCreated;
+        Items = new List<SongInfo>();
     }
 
     //This is the constructor and it will set a name, as well as

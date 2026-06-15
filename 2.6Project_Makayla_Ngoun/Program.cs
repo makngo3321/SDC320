@@ -5,23 +5,41 @@
 *
 * Main application class.
 */
+using System.Data.SQLite;
 public class PlaylistApp
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("\nMakayla Ngoun - Music Playlist App - Course Project SDC320\n");
+        const string dbName = "Playlist.db";
+        Console.WriteLine("\nMakayla Ngoun - Music Playlist Application\n");
 
-        //This creates a new playlist
-        Playlist myPlaylist = new Playlist("The Best Beats Playlist");
+        SQLiteConnection conn = SQLiteDatabase.Connect(dbName);
 
-        //Adding songs
-        myPlaylist.AddSong(new Song("We Ride", "Rihanna", 3));
-        myPlaylist.AddSong(new Song("Wait for You", "Elliott Yamin", 4));
-        myPlaylist.AddSong(new Song("Energy", "Keri Hilson", 3));
-        myPlaylist.AddSong(new Song("Soulja Girl", "Soulja Boy", 2));
+        if (conn != null)
+        {
+            //Creating tables for playlist and songs
+            PlaylistDb.CreateTables(conn);
 
-        //Creates the menu
-        PlaylistMenu menu = new PlaylistMenu(myPlaylist);
-        menu.Run(); 
+            //This is to grab the playlist
+            Playlist myPlaylist = PlaylistDb.GetPlaylist(conn);
+            
+            //If no playlist exists, create playlist
+            if (myPlaylist.ID == -1)
+            {
+                PlaylistDb.AddPlaylist(conn, new Playlist("The Best Beats Playlist"));
+                myPlaylist = PlaylistDb.GetPlaylist(conn);
+            }
+
+            //Loading songs that are already saved
+            List<SongInfo> savedSongs = PlaylistDb.GetSongsForPlaylist(conn, myPlaylist.ID);
+            foreach (SongInfo song in savedSongs)
+            {
+                myPlaylist.AddSong(song);
+            }
+
+            //This is the menu creation
+            PlaylistMenu menu = new PlaylistMenu(myPlaylist, conn);
+            menu.Run();
+        }
     }
 }

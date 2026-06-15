@@ -8,15 +8,19 @@
 * an exit option so that users can leave the playlist. 
 * This class also represents composition.
 */
+using System.Data.SQLite;
 public class PlaylistMenu
 {
     //The current playlist
     public Playlist CurrentPlaylist { get; set; }
 
+    public SQLiteConnection Conn { get; set; }
+
     //Constructor so that the menu knows what playlist to follow.
-    public PlaylistMenu(Playlist playlist)
+    public PlaylistMenu(Playlist playlist, SQLiteConnection conn)
     {
         CurrentPlaylist = playlist;
+        Conn = conn;
     }
 
     //This shows the options that will be displayed to the user
@@ -94,6 +98,7 @@ public class PlaylistMenu
 
         Song newSong = new Song(title, artist, length);
         CurrentPlaylist.AddSong(newSong);
+        PlaylistDb.AddSong(Conn, CurrentPlaylist.ID, newSong);
 
         Console.Write("\n" + title + " has been added to your playlist.");
     }
@@ -108,6 +113,7 @@ public class PlaylistMenu
         if (SongRemoval != null)
         {
             CurrentPlaylist.Items.Remove(SongRemoval);
+            PlaylistDb.DeleteSong(Conn, CurrentPlaylist.ID, title);
             Console.WriteLine("\n" + title + " was remove from your playlist.");
         }
         else
